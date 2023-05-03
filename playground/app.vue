@@ -1,7 +1,10 @@
 <template>
   <div>
     <ul>
-      <li>Pure icon: <nuxt-icon name="fire" /></li>
+      <li>
+        Pure icon:
+        <nuxt-icon name="fire" svg-class="w-6 h-6 b-12"/>
+      </li>
       <li class="colored">
         Icon with color from text: <nuxt-icon name="fire" />
       </li>
@@ -17,12 +20,11 @@
       <li>
         Reactive change:
         <nuxt-icon :name="icon ? 'user/badge' : 'admin/form/bug'" />
-        <button @click="icon = !icon">
-          Update
-        </button>
+        <button @click="icon = !icon">Update</button>
       </li>
       <li class="colored">
-        Inline icon (stroke) with color from text: <nuxt-icon name="foxcode-logo" />
+        Inline icon (stroke) with color from text:
+        <nuxt-icon name="foxcode-logo" />
       </li>
       <li class="colored">
         Icon with default fill: <nuxt-icon name="foxcode-logo" filled />
